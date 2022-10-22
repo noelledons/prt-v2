@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./Header.scss";
 
@@ -8,11 +9,11 @@ const Header = () => {
       <Link to="/" className="site-logo">
         ND
       </Link>
-
       <ul>
-        <CustomLink to="/about"> About </CustomLink>
-        <CustomLink to="/work"> Work </CustomLink>
-        <CustomLink to="/contact"> Contact </CustomLink>
+        <CustomLink to="/home"> Home </CustomLink>
+        <CustomLink to="/#about"> About </CustomLink>
+        <CustomLink to="/#skills"> Skills </CustomLink>
+        <CustomLink to="/#contact"> Contact </CustomLink>
       </ul>
     </nav>
   );
