@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
@@ -10,25 +10,13 @@ const Header = () => {
         ND
       </Link>
       <ul>
-        <CustomLink to="/home"> Home </CustomLink>
-        <CustomLink to="/#about"> About </CustomLink>
-        <CustomLink to="/#skills"> Skills </CustomLink>
-        <CustomLink to="/#contact"> Contact </CustomLink>
+        <Link to="/home"> Home </Link>
+        <Link to="/about"> About </Link>
+        <Link to="/contact"> Contact </Link>
+        <button> Let's Connect </button>
       </ul>
     </nav>
   );
 };
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  );
-}
 
 export default Header;

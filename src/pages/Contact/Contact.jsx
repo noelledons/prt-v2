@@ -1,8 +1,11 @@
 import React from "react";
-import "./Contact.scss";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <h1>This is the contact page</h1>
+    </div>
+  );
 };
 
 export default Contact;
